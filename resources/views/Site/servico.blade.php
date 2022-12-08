@@ -3,7 +3,7 @@
 
 @section('conteudo')    
 
-    <section class="wow fadeIn parallax" data-stellar-background-ratio="0.5" style="background-image:url(' {{ asset('site/images/fundo-sobre.png') }}">
+<section class="wow fadeIn parallax" data-stellar-background-ratio="0.5" style="background-image:url(' {{ asset('site/images/fundo-sobre.png') }}">
             <!-- <div class="opacity-medium bg-extra-dark-gray"></div> -->
             <div class="container">
                 <div class="row">
@@ -19,43 +19,83 @@
                     </div>
                 </div>
             </div>
-        </section>
+    </section>
 
-        <div class="container" style="margin-top: 50px;">
+    <div class="container" style="background-color: #F5F5F5; width: 100%;">
             <div class="row">
-                <div class="col-sm-12 text-center">
-                    <h4 class="text-extra-dark-gray alt-font font-weight-600 ">{{$servico->titulo}}</h4>
-                    <p class="text-medium line-height-30 text-medium-gray"> 
-                    </p>
+                <div class="col-sm-12 text-center col-filter-input">
+                
+                   <div class="filter col-sm-12 col-md-6 col-lg-6" style="margin: none; padding: 20px;">
+                        <input type="text"  class="big-input" placeholder="Digite o serviço que você deseja" autofocus>
+                        <span class="icon-input">
+                            <i class="material-icons">tune</i>
+                        </span>
+                    </div>
+                
                 </div>
             </div>
-        </div>   
+    </div>   
 
-       
-        <section>
+    <section>
             <div class="container">
-                <div class="row">
-                    <main class="col-md-9 col-sm-12 col-xs-12 right-sidebar sm-margin-60px-bottom xs-margin-40px-bottom no-padding-left sm-no-padding-right">
-                        <div class="col-md-12 col-sm-12 col-xs-12 blog-details-text last-paragraph-no-margin">
-
-                            <!-- <img src="{{$servico->getFirstMediaUrl('servico-imagem')}}" style="margin-bottom: 50px;">   -->
-                        
-                            @php echo $servico->descricao @endphp
-                        </div>
-                        <div class="col-md-12 col-sm-12 col-xs-12 margin-seven-bottom margin-eight-top">
-                            <div class="divider-full bg-medium-light-gray"></div>
-                        </div>
-                        
-                    </main>  
-                    <aside class="col-md-3 col-sm-12 col-xs-12 pull-right">
-                        <div class="margin-45px-bottom xs-margin-25px-bottom text-center">
-                            <div class="text-extra-dark-gray margin-20px-bottom alt-font text-uppercase text-small font-weight-600"><span>Agende agora o seu horário</span></div>
-                            <a href="{{$servico->link}}"><img src="http://placehold.it/800x533" alt="" class="margin-25px-bottom"/></a>
-                            <p class="margin-20px-bottom text-small">Clique no botão abaixo e agende agora mesmo o seu horário com um de nossos terapeutas.</p>
-                            <a class="btn btn-very-small btn-dark-gray text-center text-uppercase" data-toggle="modal" data-target="#ModalLogin" data-modal="@conecte" >Agendar Agora</a>
-                        </div>                                                              <!--{{$servico->link}}-->
-                    </aside>
+                <div class="card-deck"> 
+                        @foreach ($servicos as $servico)
+                             <div  class="card margin-50px-bottom " id="{{$servico -> titulo}}">         
+                                    <span class="display-none">{{$images = $servico->slug}}</span>
+                                    <div class="over-img" data-toggle="modal"  data-target="#ModalServico"  data-title="{{$servico->titulo}}" data-whatever="{{$servico->saiba_mais}}">
+                                        <a > Saiba Mais</a>
+                                    </div>  
+                                                                                                      
+                                    <div class="card-img-top" style="background-image: url({{asset('site/images/servico/'.trim($images.'.JPG',''))}})"> </div>
+                                                                
+                                    <div class="card-body" >
+                                        <h6 class="card-title text-center">{{$servico -> titulo}}</h6>
+                                        <p class="card-text text-justify  md-width-100 xs-width-100 sm-margin-lr-auto text-medium-gray">{{ $servico->descricao }}</p> 
+                                    </div>
+                                    <div class="card-footer">
+                                        <a data-toggle="modal" data-target="#ModalLogin" data-modal="@conecte" class="btn btn-small btn-deep-pink btn-rounded">Agendar</a>
+                                    </div>
+                                </div>
+                            
+                        @endforeach
                 </div>
             </div>
-        </section>
+         
+    </section>
+        
+
 @endsection
+
+
+@section('scripts_adicionais')
+<script src="{{ asset('js/site/filtro_servico.js') }}"></script>
+@endsection
+
+<!--- Modal -->
+<div class="modal fade" id="ModalServico" tabindex="-1" role="dialog" aria-labelledby="ModalServico" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <!--  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>-->
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+            </div>
+        
+             
+            
+            <div class="modal-body">   
+                    <div class="container-text">
+                        <h5 class="font-weight-500 text-uppercase text-center alt-font text-extra-dark-gray center-col sm-padding-50px  sm-padding-50px width-100 margin-25px-bottom xs-width-100"></h5>
+                    </div>
+                        <div class="container-servico ">
+                            <p style="text-align:justify; font-size:15px;"> </p>
+                        </div>
+                        
+                    <div class="modal-footer">
+                
+                    </div>
+            </div>
+         </div>
+    </div> 
+</div>

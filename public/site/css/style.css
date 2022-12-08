@@ -3918,3 +3918,46 @@ aside .latest-post li figure {width: 75px;}
 .selectpicker {padding-bottom: 34px;}
 .selectpicker button{border: 1px solid #d1d1d1; text-transform: none;  padding: 18px 25px; font-size:14px;} 
 .selectpicker label{display: inline-block;}
+
+
+/* ===================================
+   Card image 
+====================================== */
+
+
+.card{ width: 27rem; height: 40rem; border: 1px solid rgba(0, 0, 0, 0.1); border-radius:10px; box-shadow: 5px 5px 5px rgb(0,0,0, 0.1);}
+.card-deck{   display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 60px; flex-wrap: wrap;}
+
+.card-title{ font-size: 10px; font-weight: 500;}
+.card .card-body{padding: 5px; margin:none}
+
+.card .card-img-top{padding: 78px; cursor: pointer; background-size: cover; background-repeat: no-repeat;}
+
+.card .over-img{  background-color: rgb(0, 0, 0, 0.4); justify-content: center; flex-direction: column; align-items: center; width: 26.9rem; display: flex; height: 157px; position: absolute; transition: .5s ease; cursor: pointer;}
+.card .over-img a{color: #fff; font-weight: 700;}
+.card .over-img:hover{opacity: 5; color: #fff;  background-color: rgb(189, 78, 179, 0.8);}
+
+.card .card-footer{ margin: 13px; display: flex;  align-items: center;flex-direction: column;}
+
+@media screen and (max-width: 912px){ .card {margin-left: 34px;} }
+@media screen and (max-width: 650px){ .card {margin-left: 0} }
+@media screen and (max-width: 280px){ .card .over-img{width: 24.9rem}  }
+
+
+/* ===================================
+   Card image Filter
+====================================== */
+/* js*/
+
+
+.filter input:focus{ border: 1px solid rgb(184,79,248, 0.5);}
+::-webkit-input-placeholder{ opacity: 0.5;}
+
+.hidden-filter{ display: none; }
+
+.col-filter-input{display: flex; flex-direction: column; align-items: center;}
+.icon-input{    position: absolute; bottom: 60px; right: 50px; }
+.icon-input i {   color: #E3E1E3; opacity: 2;}
+
+@media screen and (max-width: 800px){ .card-row {display: flex; justify-content: center;}}
+@media screen and (max-width: 800px){.col-filter-input{display: block;}}

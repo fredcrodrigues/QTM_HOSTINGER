@@ -2684,6 +2684,19 @@ $(document).ready(function() {
         modal.find('.modal-header').html(typemodal)
     })
 
+    $('#ModalServico').on('show.bs.modal', function(event) {
+
+        var button = $(event.relatedTarget) 
+        var data = button.data('whatever')
+        var typemodal = button.data('modal')
+        var title = button.data('title')
+    
+        var modal = $(this)
+
+        modal.find('.modal-body .container-text h5').text(title)
+        modal.find('.modal-body .container-servico p').html(data)
+        modal.find('.modal-header').html(typemodal)
+    })
     
    
        

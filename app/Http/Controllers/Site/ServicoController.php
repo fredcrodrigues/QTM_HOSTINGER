@@ -11,8 +11,8 @@ class ServicoController extends Controller
 {
     public function index()
     {
-        $servico = Servico::first();
+        $servicos = Servico::all();
         
-        return view('Site.servico', compact('servico'));
+        return view('Site.servico', compact('servicos'));
     }
 }

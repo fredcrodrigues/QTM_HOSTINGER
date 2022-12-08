@@ -31,7 +31,7 @@ class User extends Authenticatable implements HasMedia
      */
     protected $fillable = 
     [
-        'nome','cpf_cnpj','rg','numero_conselho','slug','telefone','conselho','especialidade','tipo','email','password','status','remember_token'
+        'nome','cpf_cnpj','rg','numero_conselho','slug','telefone','conselho','especialidade','tipo','email','password','status','remember_token', 'user_cpf'
     ]; 
 
 
