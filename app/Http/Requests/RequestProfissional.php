@@ -29,10 +29,10 @@ class RequestProfissional extends FormRequest
             case 'PUT':
                 return [
                     'nome' =>['required'],
-                    'cpf_cnpj' => ['required','cpf',Rule::unique('users','cpf_cnpj')->ignore($this->route('profissional_adm'))],
+                    'cpf_cnpj' => ['required'],//,'cpf',Rule::unique('users','cpf_cnpj')->ignore($this->route('profissional_adm'))],
                     'especialidade' =>['required'],
                     'telefone' =>['required'],
-                    'email' => ['required', 'string', 'email', 'max:255', Rule::unique('users','email')->ignore($this->route('profissional_adm'))],
+                    'email' => ['required'],//, 'string', 'email', 'max:255', Rule::unique('users','email')->ignore($this->route('profissional_adm'))],
                     'cep' =>['required'],
                     'estado' =>['required'],
                     'cidade' =>['required'],
@@ -45,10 +45,10 @@ class RequestProfissional extends FormRequest
             case 'POST':
                 return [
                     'nome' =>['required'],
-                    'cpf_cnpj' => ['required','cpf','unique:users'],
+                    'cpf_cnpj' => ['required'],//,'cpf','unique:users'],
                     'especialidade' =>['required'],
                     'telefone' =>['required'],
-                    'email' => ['required', 'string', 'max:255','email','unique:users'],
+                    'email' => ['required'],//, 'string', 'max:255','email','unique:users'],
                     'cep' =>['required'],
                     'estado' =>['required'],
                     'cidade' =>['required'],

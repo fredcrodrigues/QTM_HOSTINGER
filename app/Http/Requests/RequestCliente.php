@@ -35,16 +35,16 @@ class RequestCliente extends FormRequest
             case 'PUT':
                 return [
                     'nome' =>['required'],
-                    'cpf_cnpj' => ['required','cpf',Rule::unique('users','cpf_cnpj')->ignore($this->route('cliente_adm'))],
+                    'cpf_cnpj' => ['required'],//'cpf',Rule::unique('users','cpf_cnpj')->ignore($this->route('cliente_adm'))],
                     'telefone' =>['required'],
-                    'email' => ['required', 'string', 'email', 'max:255', Rule::unique('users','email')->ignore($this->route('cliente_adm'))],
+                    'email' => ['required'] //'string', 'email', 'max:255', Rule::unique('users','email')->ignore($this->route('cliente_adm'))],
                 ];
             case 'POST':
                 return [
                     'nome' =>['required'],
-                    'cpf_cnpj' => ['required','cpf','unique:users'],
+                    'cpf_cnpj' => ['required'],//,'cpf','unique:users'],
                     'telefone' =>['required'],
-                    'email' => ['required', 'string', 'max:255','email','unique:users'],
+                    'email' => ['required']// 'string', 'max:255','email','unique:users'],
                 ];
         }
     }

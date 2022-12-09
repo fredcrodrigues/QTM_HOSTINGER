@@ -57,6 +57,7 @@ class ProfissionalController extends Controller
                 $modelo->password = bcrypt($request->cnpj);
                 $modelo->tipo = "profissional";
                 $modelo->status = "pendente";
+                $modelo->user_cpf = $request->cpf_cnpj . "_profissional";
 
                 $endereco = new Endereco();
                 $endereco->logradouro = $request->logradouro;
@@ -93,7 +94,7 @@ class ProfissionalController extends Controller
                 return back()->withInput();
 
             }catch(\Exception  $erro){
-                Session::flash('retorno', array('mensagem'=>$erro.'Não foi possível realizar o cadastro, tente novamente mais tarde.',
+                Session::flash('retorno', array('mensagem'=>'Não foi possível realizar o cadastro, esse CPF já está cadastrado.',
                 'titulo'=>'Atenção!','classe'=>'danger'));
                 return back()->withInput();
             }

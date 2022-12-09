@@ -46,6 +46,7 @@ class ClienteController extends Controller
                 $modelo->password = bcrypt($request->cpf);
                 $modelo->tipo = "cliente";
                 $modelo->status = "ativo";
+                $modelo->user_cpf = $request->cpf_cnpj . "_cliente";
     
                 DB::transaction(function () use ($modelo,$email_envio,$request) {
                     $modelo->save();
@@ -65,7 +66,7 @@ class ClienteController extends Controller
                 return back()->withInput();
 
             }catch(\Exception  $erro){
-                Session::flash('retorno', array('mensagem'=>$erro.'Não foi possível realizar o cadastro, tente novamente mais tarde.',
+                Session::flash('retorno', array('mensagem'=>'Não foi possível realizar o cadastro, o CPF já está cadastrado.',
                 'titulo'=>'Atenção!','classe'=>'danger'));
                 return back()->withInput();
             }
