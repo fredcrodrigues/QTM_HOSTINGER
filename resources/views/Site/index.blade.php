@@ -11,6 +11,7 @@
         @include('Site.partes_index.sobre_secundario')
         <!-- @include('Site.partes_index.covidas_principal') -->
         @include('Site.partes_index.produtos_principal')
+        @include('Site.partes_index.produto_audio')
         @include('Site.partes_index.parceiro')
         @include('Site.partes_index.contato')
 
