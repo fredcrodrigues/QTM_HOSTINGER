@@ -14,7 +14,7 @@ class AltaerTableTime extends Migration
     public function up()
     {
         Schema::table('times', function (Blueprint $table) {
-            $table->longText("conteudo")->change();
+            $table->longText("conteudo")->nullable()->change();
         });
     }
 
@@ -26,7 +26,7 @@ class AltaerTableTime extends Migration
     public function down()
     {
         Schema::table('times', function (Blueprint $table) {
-            $table->string("conteudo")->change();
+            $table->longText("conteudo")->nullable()->change();
         });
     }
 }
