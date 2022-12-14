@@ -66,18 +66,17 @@
                                     <div class="display-table height-100 width-100">
                                         <div class="vertical-align-middle display-table-cell icon-social-small">
                                             <a href="http://www.facebook.com" class="text-white text-white-hover" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                                            <a href="http://www.instagram.com" class="text-white text-white-hover" target="_blank"><i class="fab fa-instagram"></i></a>
+                                            <a href="{{$times->instagram}}" class="text-white text-white-hover" target="_blank"><i class="fab fa-instagram"></i></a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="team-overlay bg-deep-pink opacity8"></div>
                             </div>
                             <figcaption>
-                                <div class="team-member-position margin-20px-top text-center" style="height: 380px;">
+                                <div class="team-member-position margin-20px-top text-center">
                                     <div class="text-small font-weight-500 text-extra-dark-gray text-uppercase">{{$times->nome}}</div>
                                     <div class="text-extra-small text-uppercase text-medium-gray">{{$times->cargo}}</div>
                                     <br>
-                                    @php echo $times->conteudo @endphp
                                 </div>   
                             </figcaption>
                         </figure>
