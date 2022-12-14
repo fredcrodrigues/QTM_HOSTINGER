@@ -15,7 +15,7 @@
                             <h1 class="text-white alt-font font-weight-600 letter-spacing-minus-1 margin-10px-bottom">QTM Healthtech!</h1>
                             <!-- end page title -->
                             <!-- start sub title -->
-                            <span class="text-white opacity6 alt-font">Ciência | Saúde e Bem-Estar | Tecnologia</span>
+                            <span class="text-white opacity6 alt-font">Ciência | Saúde e Bem-Estar | Conciência e Tecnologia</span>
                             <!-- end sub title -->
                         </div>
                     </div>
