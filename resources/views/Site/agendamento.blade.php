@@ -86,7 +86,7 @@
                             <div class="col-md-6 selectpicker ">
                                 <label>Qual tipo de serviço você deseja</label>
                                 <select id="servicos"  class="selectpicker form-control big-input" title="Selecione..." data-width="100%" multiple> 
-                                    <option>Alinhamento de Chakras</option>
+                                    <option >Alinhamento de Chakras</option>
                                     <option>Mapa Astral Védico</option>
                                     <option>Psicoterapia</option>
                                     <option>Tarô Terapêutico</option>
@@ -98,8 +98,13 @@
                                     <option>Cristalterapia</option>
                                     <option>Revolução Solar</option>
                                     <option>Fitoterapia</option>
+                                    <option>Outros</option>
                                     
                                 </select>
+                            </div>  
+                            <div class="col-md-12  ">
+                                <label>Descreva qual pratica você deseja:</label>
+                                <input id="outra" class="big-input"  type="text" disabled="true" >
                             </div>  
                             <div class="col-md-6 selectpicker ">
                                     <label>Que tipo de atendimento você deseja?</label>

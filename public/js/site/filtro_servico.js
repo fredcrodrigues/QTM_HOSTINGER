@@ -30,7 +30,7 @@ const showCard = (cardArray,inputvalue ) => {
 input.addEventListener('input', event => {
     
    const inputvalue = event.target.value.trim().toLowerCase()
-   console.log(inputvalue)
+  
    const cardArray =  Array.from(cards.children)
    
    hiddenCard(cardArray,inputvalue)

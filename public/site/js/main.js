@@ -2697,9 +2697,7 @@ $(document).ready(function() {
         modal.find('.modal-body .container-servico p').html(data)
         modal.find('.modal-header').html(typemodal)
     })
-    
-   
-       
+  
 
 
 });
@@ -2775,10 +2773,6 @@ $(window).load(function(){
    
 });
 
-
-/*modal
- ====================================== */
-$('modal open')
 
 
 
