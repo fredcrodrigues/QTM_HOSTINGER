@@ -9,14 +9,13 @@
     <body class="top-nav">
        
         @include('layouts.preload')
-        @include('layouts.modal_cadastro') 
         @include('layouts.modal') 
 
+
         @if(Request::is('/')) <!--- verifica a url -->
-            @include('layouts.menu_main')
+            @include('layouts.menuIndex')
         @else
-            @include('layouts.menu_secundario')
-            
+            @include('layouts.header')
         @endif 
 
         @yield('conteudo')

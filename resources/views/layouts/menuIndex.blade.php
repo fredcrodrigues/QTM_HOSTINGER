@@ -10,7 +10,7 @@
                 <ul class="navlinks">
                     <li><a title="Inicio" style="font-size: 15px; line-height: 20px;" href="#" >Inicio</a></li>
                     <li><a title="Sobre" style="font-size: 15px; line-height: 20px;" href="#Cadastro">Cadastra-se</a></li>
-                    <li><a title="Serviços" style="font-size: 15px; line-height: 20px;" href="#Serviço">Serviços</a></li>
+                    <li><a title="Servicos" style="font-size: 15px; line-height: 20px;" href="#Servico">Serviços</a></li>
                     <!--<li><a title="Covidas" style="font-size: 15px; line-height: 20px;" href="#Covidas">Covidas</a></li>-->
                     <li><a title="Produtos" style="font-size: 15px; line-height: 20px;"  href="#Produtos">Produtos</a></li>
                     <li><a title="Covidas" style="font-size: 15px; line-height: 20px;" href="#Contato">Contato</a></li>

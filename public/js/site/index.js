@@ -1,4 +1,5 @@
 $(document).ready(function($) {
+    console.log("tyesnrtado")
     $("#save").on('click', function(event) {
         var $this = $(this);
         event.preventDefault();
@@ -31,3 +32,4 @@ $(document).ready(function($) {
             });
         });
     });
+

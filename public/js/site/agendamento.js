@@ -58,16 +58,19 @@ function loadScript() {
 $("#servicos").change(function (){
     
     const values = $(this).val()
-  
+    console.log(values)
     $.each(values, function(index, value){
   
-        if(value == "Outros"){
-            $('#outra').prop('disabled', false)
-            $('#outra').selectpicker('refresh');
-        }else{
+        if(value != "Outros" || value == ''){
             $('#outra').prop('disabled', true);
+            $('#outra').val("");
             $('#outra').selectpicker('refresh');
             
+        }else{
+            $('#outra').prop('disabled', false);
+            $('#outra').selectpicker('refresh'); 
+            
+        
         }
        
     })

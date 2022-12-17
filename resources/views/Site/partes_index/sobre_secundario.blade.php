@@ -1,4 +1,4 @@
-<section id="Serviço" class="wow fadeIn parallax" data-stellar-background-ratio="0.4" style="background-image:url('http://placehold.it/1920x1200');">
+<section id="Servico" class="wow fadeIn parallax" data-stellar-background-ratio="0.4" style="background-image:url('http://placehold.it/1920x1200');">
     <div class="opacity-full"></div>
     <div class="container position-relative">
         <div class="row equalize sm-equalize-auto">
