@@ -19,10 +19,9 @@
 
                           <!-- remove data-lik -->
                         <li data-index="{{$banners->id}}" data-transition="fadethroughtransparent" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="{{$banners->getFirstMediaUrl('banner-imagem')}}"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1000" data-fsslotamount="7" data-saveperformance="off"  data-title="One" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-                            <span class="display-none">{{$images = $banners->slug}}</span>
-
+                     
                             <!-- main image $banners->getFirstMediaUrl('banner-image') entender isto -->
-                            <img src="{{asset('site/images/'.trim($images.'.png',''))}}"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="6" class="rev-slidebg" data-no-retina>
+                            <img src="{{ url('storage/imagem_banner/'.$banners->slug .'.png') }}"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="6" class="rev-slidebg" data-no-retina>
                             
 
                         </li>

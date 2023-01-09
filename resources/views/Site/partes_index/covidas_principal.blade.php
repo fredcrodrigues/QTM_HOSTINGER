@@ -3,7 +3,7 @@
         <div class="row equalize md-equalize-auto">
             <div class=" col-lg-6 col-md-6  col-sm-12  col-xs-12  text-center display-table xs-margin-15px-bottom wow fadeIn">
                 <div class="display-table-cell vertical-align-middle">
-                    <img src="{{asset('site/images/covidas.png')}}" alt="" class="width-70">
+                    <img src="{{ url('storage/imagem_covidas/covidas.png') }}" alt="" class="width-70">
 
                 </div>
             </div>

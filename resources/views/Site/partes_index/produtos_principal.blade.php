@@ -1,7 +1,8 @@
 <section id="Produtos"class="wow fadeIn parallax" data-stellar-background-ratio="0.4" style="background-image:url('http://placehold.it/1920x1200');">
+    <div class="opacity-full"></div>
     <div class="opacity-full bg-extra-dark-gray" ></div>
         <div class="container position-relative ">
-            <div class="row ">
+            <div class="row equalize md-equalize-auto ">
                 <div class=" col-lg-12 col-sm-12 col-sm-12 col-xs-12 text-center padding-40px-bottom col-md-12 text-center display-table lg-margin-10px-top md-margin-10px-bottom sm-no-margin-bottom sm-margin-ten-bottom xs-padding-five-lr xs-margin-ten-bottom wow fadeIn last-paragraph-no-margin">
                     <div class="display-table-cell vertical-align-middle sm-text-center">
                         <h4 class="alt-font text-white">Confira os nossos principais <span class="bg-primary"> Produtos</span></h4>
