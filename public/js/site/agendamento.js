@@ -9,6 +9,7 @@ function loadScript() {
         var urgencia = $('#urgencia').val()
         var outros = $('#outra').val()
         var informacoes = $('#informacoes').val()
+        console.log(outros)
 
         var dados = {cidade: cidade, contato: contato, servico:servico, outros_servico: outros,
             atendimeto: atendimeto, preferencias: preferencias, urgencia: urgencia, informacoes:informacoes
