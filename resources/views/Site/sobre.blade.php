@@ -1,7 +1,5 @@
 @extends('layouts.app')
 
-@section('head_title', 'sobre nós')
-
 @section('conteudo')
 
     <section class="wow animate__fadeIn">
@@ -10,14 +8,14 @@
                 <div class="col-12 col-lg-12">
                     <h5 class="alt-font text-extra-dark-gray">{{$sobre_conteudo->titulo}}</h5>
                     <p class="text-medium line-height-28 sm-line-height-26">
-                            @php echo $sobre_conteudo->conteudo @endphp
+                         @php echo  $sobre_conteudo->conteudo  @endphp
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class=" wow fadeIn parallax xs-background-image-center padding-nineteen-bottom xs-padding-50px-bottom" data-stellar-background-ratio="0.5" style="background-image:url('http://placehold.it/1920x1100');">
+    <section class=" wow fadeIn parallax xs-background-image-center padding-nineteen-bottom xs-padding-50px-bottom" data-stellar-background-ratio="0.5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 center-col text-center last-paragraph-no-margin">
