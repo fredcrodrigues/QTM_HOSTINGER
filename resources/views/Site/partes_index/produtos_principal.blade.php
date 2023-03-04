@@ -1,4 +1,4 @@
-<section id="Produtos"class="wow fadeIn parallax" data-stellar-background-ratio="0.4" style="background-image:url('http://placehold.it/1920x1200');">
+<section id="Produtos"class="wow fadeIn parallax" data-stellar-background-ratio="0.4">
     <div class="opacity-full"></div>
     <div class="opacity-full bg-extra-dark-gray" ></div>
         <div class="container position-relative ">
